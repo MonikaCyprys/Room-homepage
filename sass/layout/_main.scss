@@ -1,0 +1,51 @@
+.change-furniture-article {
+  padding: 17% 8%;
+  font-size: 1rem;
+  .change-furniture-header {
+    font-size: 1.7em;
+    line-height: 1;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+  .change-furniture-text {
+    line-height: 1.4;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: var(--darkGray);
+    padding: 9% 0 16% 0;
+  }
+  .shop-now {
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 10px;
+    color: var(--veryDarkGray);
+    cursor: pointer;
+    font-variant: small-caps;
+  }
+}
+.about-furniture {
+  padding: 17% 8%;
+  font-size: 1rem;
+  .about-future-header {
+    font-size: 1.2em;
+    line-height: 1;
+    letter-spacing: 4px;
+    font-variant: small-caps;
+  }
+  .about-future-text {
+    line-height: 1.4;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: var(--darkGray);
+    padding: 9% 0 16% 0;
+  }
+  .shop-now {
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 10px;
+    color: var(--veryDarkGray);
+    cursor: pointer;
+    font-variant: small-caps;
+  }
+}
