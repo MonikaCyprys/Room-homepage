@@ -16,12 +16,10 @@
     padding: 9% 0 16% 0;
   }
   .shop-now {
-    font-weight: 500;
-    font-size: 1.2em;
-    letter-spacing: 10px;
-    color: var(--veryDarkGray);
-    cursor: pointer;
-    font-variant: small-caps;
+    @extend .shop-now;
+    .btn-arrow {
+      animation: arrowMove 1.5s ease infinite;
+    }
   }
 }
 .about-furniture {
@@ -41,11 +39,21 @@
     padding: 9% 0 16% 0;
   }
   .shop-now {
-    font-weight: 500;
-    font-size: 1.2em;
-    letter-spacing: 10px;
-    color: var(--veryDarkGray);
-    cursor: pointer;
-    font-variant: small-caps;
+    @extend .shop-now;
+    .btn-arrow {
+      animation: arrowMove 1.5s ease infinite;
+    }
+  }
+}
+
+@keyframes arrowMove {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 25px;
+  }
+  100% {
+    margin-left: 0;
   }
 }
