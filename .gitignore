@@ -17,4 +17,5 @@
 .prettierignore
 
 # styles 
-.map.css
+*.css.map
+*.css
