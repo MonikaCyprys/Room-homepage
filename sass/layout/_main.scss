@@ -1,7 +1,7 @@
-.change-furniture-article {
+.article {
   padding: 17% 8%;
   font-size: 1rem;
-  .change-furniture-header {
+  &__header {
     font-size: 1.7em;
     line-height: 1.1;
     &::first-letter {
@@ -10,8 +10,20 @@
     @include tablet-view-large {
       font-size: 1.9em;
     }
+    &--about {
+      font-size: 1.2em;
+      line-height: 1;
+      letter-spacing: 4px;
+      font-variant: small-caps;
+      @include tablet-view {
+        font-size: 1.4em;
+      }
+      @include tablet-view-large {
+        font-size: 1.7em;
+      }
+    }
   }
-  .change-furniture-text {
+  &__text {
     line-height: 1.4;
     font-size: 0.9em;
     font-weight: 500;
@@ -24,51 +36,15 @@
       font-size: 1.2em;
     }
   }
-  .shop-now {
-    @extend .shop-now;
-    .btn-arrow {
-      animation: arrowMove 1.5s ease infinite;
-    }
-    @include tablet-view-large {
-      font-size: 1.4em;
-    }
+  &__btn {
+    @extend .article__btn;
   }
-}
-.about-furniture {
-  padding: 17% 8%;
-  font-size: 1rem;
-  .about-future-header {
-    font-size: 1.2em;
-    line-height: 1;
-    letter-spacing: 4px;
-    font-variant: small-caps;
-    @include tablet-view {
-      font-size: 1.4em;
-    }
-    @include tablet-view-large {
-      font-size: 1.7em;
-    }
+  &__btnArrow {
+    animation: arrowMove 1.5s ease infinite;
   }
-  .about-future-text {
-    line-height: 1.4;
-    font-size: 0.9em;
-    font-weight: 500;
-    color: var(--darkGray);
-    padding: 9% 0 7% 0;
-    @include tablet-view {
-      line-height: 1.7;
-      padding: 9% 0 0 0;
-    }
-    @include tablet-view-large {
-      font-size: 1.2em;
-    }
+  @include tablet-view-large {
+    font-size: 1.4em;
   }
-  //   .shop-now {
-  //     @extend .shop-now;
-  //     .btn-arrow {
-  //       animation: arrowMove 1.5s ease infinite;
-  //     }
-  //   }
 }
 
 @keyframes arrowMove {

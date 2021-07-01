@@ -19,31 +19,21 @@
       rel="stylesheet"
     />
     <title>Frontend Mentor | Room homepage</title>
-
-    <!-- <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style> -->
   </head>
   <body>
-    <header class="header-hero-image">
-      <nav class="mobile-nav">
-        <button class="menu-nav">
-          <img class="menu-btn" src="./images/icon-hamburger.svg" alt="" />
+    <header class="header">
+      <nav class="nav">
+        <button class="nav__hamburger">
+          <img class="nav__btn" src="./images/icon-hamburger.svg" alt="" />
         </button>
-        <div class="show-nav">
-          <button class="nav-item">home</button>
-          <button class="nav-item">shop</button>
-          <button class="nav-item">about</button>
-          <button class="nav-item">contact</button>
+        <div class="nav__menu">
+          <button class="nav__item">home</button>
+          <button class="nav__item">shop</button>
+          <button class="nav__item">about</button>
+          <button class="nav__item">contact</button>
         </div>
         <svg
-          class="logo"
+          class="nav__logo"
           width="62"
           height="14"
           xmlns="http://www.w3.org/2000/svg"
@@ -55,35 +45,33 @@
           />
         </svg>
       </nav>
-      <div class="header-btn">
+      <div class="header__btn">
         <img
-          class="slider-arrow left-arrow"
+          class="header__slider left-arrow"
           src="./images/icon-angle-left.svg"
           alt=""
         />
         <img
-          class="slider-arrow right-arrow"
+          class="header__slider right-arrow"
           src="./images/icon-angle-right.svg"
           alt=""
         />
       </div>
     </header>
     <main>
-      <article class="change-furniture-article">
-        <h1 class="change-furniture-header">
-          discover innovative ways to decorate
-        </h1>
-        <p class="change-furniture-text">
+      <article class="slider article">
+        <h1 class="article__header">discover innovative ways to decorate</h1>
+        <p class="article__text">
           We provide unmatched quality, comfort, and style for property owners
           across the country. Our experts combine form and function in bringing
           your vision to life. Create a room in your own style with our
           collection and make your property a reflection of you and what you
           love.
         </p>
-        <!-- <button class="shop-now">
+        <button class="article__btn">
           shop now
           <svg
-            class="btn-arrow"
+            class="article__btnArrow"
             width="40"
             height="12"
             xmlns="http://www.w3.org/2000/svg"
@@ -94,14 +82,16 @@
               fill-rule="nonzero"
             />
           </svg>
-        </button> -->
+        </button>
       </article>
-      <div class="furniture-image">
+      <div class="slider__image">
         <img src="./images/image-about-dark.jpg" alt="" />
       </div>
-      <article class="about-furniture">
-        <h1 class="about-future-header">about our furniture</h1>
-        <p class="about-future-text">
+      <article class="article">
+        <h1 class="article__header article__header--about">
+          about our furniture
+        </h1>
+        <p class="article__text">
           Our multifunctional collection blends design and function to suit your
           individual taste. Make each room unique, or pick a cohesive theme that
           best express your interests and what inspires you. Find the furniture
@@ -110,7 +100,7 @@
           dream space.
         </p>
       </article>
-      <div class="furniture-image">
+      <div class="article__image">
         <img src="./images/image-about-light.jpg" alt="" />
       </div>
     </main>
