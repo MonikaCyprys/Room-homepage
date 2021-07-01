@@ -1,0 +1,70 @@
+.header-hero-image {
+  width: 100%;
+  min-height: 360px;
+  background-image: url(../../images/mobile-image-hero-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .header-btn {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: var(--black);
+    height: 50px;
+    width: 100px;
+    display: flex;
+    .slider-arrow {
+      width: 50%;
+      height: 100%;
+      padding: 15px 20px;
+      cursor: pointer;
+    }
+  }
+  nav.mobile-nav {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: left;
+    position: relative;
+    .menu-nav {
+      margin: 45px;
+      cursor: pointer;
+      position: relative;
+      z-index: 3;
+    }
+    .logo {
+      position: absolute;
+      top: 45px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .show-nav {
+      z-index: 2;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-color: var(--white);
+      display: flex;
+      justify-content: flex-end;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.8s ease;
+
+      &.show-nav-is-open {
+        opacity: 1;
+        pointer-events: all;
+        transition: all 0.8s ease;
+      }
+      .nav-item {
+        margin-right: 25px;
+        font-family: inherit;
+        font-weight: 600;
+        cursor: pointer;
+        transition: margin-right 0.8s 0.2 ease;
+      }
+    }
+  }
+}
