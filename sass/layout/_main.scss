@@ -1,14 +1,11 @@
 .article {
-  padding: 17% 8%;
+  padding: 14% 8%;
   font-size: 1rem;
   &__header {
     font-size: 1.7em;
     line-height: 1.1;
     &::first-letter {
       text-transform: capitalize;
-    }
-    @include tablet-view-large {
-      font-size: 1.9em;
     }
     &--about {
       font-size: 1.2em;
@@ -17,9 +14,6 @@
       font-variant: small-caps;
       @include tablet-view {
         font-size: 1.4em;
-      }
-      @include tablet-view-large {
-        font-size: 1.7em;
       }
     }
   }
@@ -32,9 +26,6 @@
     @include tablet-view {
       line-height: 1.7;
     }
-    @include tablet-view-large {
-      font-size: 1.2em;
-    }
   }
   &__btn {
     @extend .article__btn;
@@ -43,9 +34,17 @@
     animation: arrowMove 1.5s ease infinite;
   }
   @include tablet-view-large {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
 }
+.about {
+  width: 100%;
+
+  &__image {
+    width: 100%;
+  }
+}
+
 
 @keyframes arrowMove {
   0% {

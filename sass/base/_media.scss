@@ -1,5 +1,5 @@
 @mixin tablet-view {
-  @media (min-width: 600px) {
+  @media (min-width: 540px) {
     @content;
   }
 }
@@ -8,8 +8,8 @@
     @content;
   }
 }
-@mixin desktop-view {
-  @media (min-width: 960px) {
-    @content;
-  }
-}
+// @mixin desktop-view {
+//   @media (min-width: 960px) {
+//     @content;
+//   }
+// }

@@ -1,12 +1,13 @@
 .header {
   width: 100%;
-  min-height: 360px;
-  background-image: url(../../images/mobile-image-hero-1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
+  overflow-x: hidden;
+  font-size: 0;
+  &__heroImage {
+    width: 100%;
+  }
   &__btn {
+    z-index: 2;
     right: 0;
     bottom: 0;
     position: absolute;
@@ -16,8 +17,6 @@
     display: flex;
   }
   &__slider {
-    width: 50%;
-    height: 100%;
     padding: 15px 20px;
     cursor: pointer;
   }
@@ -26,7 +25,9 @@
     width: 100%;
     height: fit-content;
     justify-content: left;
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
     &__hamburger {
       margin: 45px;
       cursor: pointer;
