@@ -1,4 +1,4 @@
-(function () {
+export default function navigation() {
   let isOpen = false;
   const nav = document.querySelector(".nav__menu");
   const menuNavBtn = document.querySelector(".nav__btn");
@@ -13,4 +13,4 @@
       nav.classList.remove("nav__menu--active");
     }
   });
-})();
+}
