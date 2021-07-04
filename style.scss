@@ -1,7 +1,7 @@
 /*Base*/
 @import "sass/base/reset";
-@import "sass/base/typography";
 @import "sass/base/media";
+@import "sass/base/typography";
 
 /*colors*/
 @import "sass/colors/light-theme";
@@ -10,7 +10,9 @@
 
 /*Components*/
 @import "sass/components/buttons";
+@import "sass/components/article";
 
 /*Layout*/
 @import "sass/layout/main";
 @import "sass/layout/header";
+@import "sass/layout/nav";

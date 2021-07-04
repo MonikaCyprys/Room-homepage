@@ -1,59 +1,33 @@
-.article {
-  padding: 14% 8%;
-  font-size: 1rem;
-  &__header {
-    font-size: 1.7em;
-    line-height: 1.1;
-    &::first-letter {
-      text-transform: capitalize;
-    }
-    &--about {
-      font-size: 1.2em;
-      line-height: 1;
-      letter-spacing: 4px;
-      font-variant: small-caps;
-      @include tablet-view {
-        font-size: 1.4em;
-      }
-    }
-  }
-  &__text {
-    line-height: 1.4;
-    font-size: 0.9em;
-    font-weight: 500;
-    color: var(--darkGray);
-    padding: 9% 0 16% 0;
-    @include tablet-view {
-      line-height: 1.7;
-    }
-  }
-  &__btn {
-    @extend .article__btn;
-  }
-  &__btnArrow {
-    animation: arrowMove 1.5s ease infinite;
-  }
-  @include tablet-view-large {
-    font-size: 1.3em;
-  }
-}
 .about {
   width: 100%;
-
+  height: fit-content;
+  font-size: 0;
+  @include tablet-view-large {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+  }
+  @include desktop-view {
+    flex-wrap: nowrap;
+  }
   &__image {
     width: 100%;
+    @include tablet-view-large {
+      width: 50%;
+    }
+    @include desktop-view {
+      width: 30%;
+    }
   }
-}
-
-
-@keyframes arrowMove {
-  0% {
-    margin-left: 0;
-  }
-  50% {
-    margin-left: 25px;
-  }
-  100% {
-    margin-left: 0;
+  &__article {
+    @extend .article;
+    @include tablet-view-large {
+      order: 3;
+    }
+    @include desktop-view {
+      width: 50%;
+      order: 0;
+      padding: 5% 4%;
+    }
   }
 }

@@ -1,0 +1,51 @@
+.article {
+  padding: 90px 10%;
+  font-size: 1rem;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  &__header {
+    font-size: 1.7em;
+    line-height: 1.1;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+    &--about {
+      font-size: 1.2em;
+      line-height: 1;
+      letter-spacing: 4px;
+      font-variant: small-caps;
+      @include tablet-view {
+        font-size: 1.4em;
+      }
+    }
+  }
+  &__text {
+    line-height: 1.5;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: var(--darkGray);
+    padding: 5% 0 10% 0;
+    @include tablet-view {
+      line-height: 1.7;
+    }
+  }
+  &__btnShopNow {
+    @extend .article__btn;
+  }
+  &__btnArrow {
+    animation: arrowMove 1.5s ease infinite;
+  }
+}
+
+@keyframes arrowMove {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 25px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}

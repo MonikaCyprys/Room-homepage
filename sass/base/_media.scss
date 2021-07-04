@@ -4,12 +4,12 @@
   }
 }
 @mixin tablet-view-large {
-  @media (min-width: 830px) {
+  @media (min-width: 930px) {
     @content;
   }
 }
-// @mixin desktop-view {
-//   @media (min-width: 960px) {
-//     @content;
-//   }
-// }
+@mixin desktop-view {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}

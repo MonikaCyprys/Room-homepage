@@ -1,71 +1,55 @@
 .header {
   width: 100%;
+  height: fit-content;
   position: relative;
   overflow-x: hidden;
-  font-size: 0;
-  &__heroImage {
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  @include tablet-view-large {
+    height: 450px;
+    flex-wrap: nowrap;
   }
+  &__heroImage {
+    max-width: 100%;
+    @include tablet-view-large {
+      width: 60%;
+    }
+  }
+
+  &__article {
+    @extend .article;
+
+    @include tablet-view-large {
+      padding: 90px 5% 5%;
+    }
+    @include tablet-view-large {
+      width: 40%;
+    }
+  }
+
   &__btn {
     z-index: 2;
     right: 0;
-    bottom: 0;
+    top: -50px;
     position: absolute;
     background-color: var(--black);
     height: 50px;
     width: 100px;
     display: flex;
   }
-  &__slider {
+  &__arrowBtn {
     padding: 15px 20px;
     cursor: pointer;
   }
-  .nav {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: left;
-    position: absolute;
-    left: 0;
-    top: 0;
-    &__hamburger {
-      margin: 45px;
-      cursor: pointer;
-      position: relative;
-      z-index: 3;
-    }
-    &__logo {
-      position: absolute;
-      top: 45px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    &__menu {
-      z-index: 2;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      background-color: var(--white);
-      display: flex;
-      justify-content: flex-end;
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.8s ease;
-
-      &--active {
-        opacity: 1;
-        pointer-events: all;
-        transition: all 0.8s ease;
-      }
-    }
-    &__item {
-      margin-right: 25px;
-      font-family: inherit;
-      font-weight: 600;
-      cursor: pointer;
-      transition: margin-right 0.8s 0.2 ease;
-    }
+}
+@keyframes arrowMove {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 25px;
+  }
+  100% {
+    margin-left: 0;
   }
 }
