@@ -2,10 +2,12 @@ export default function slider() {
   const heroImage = document.querySelector(".header__heroImage");
   let device = null;
   window.addEventListener("load", function () {
-    if (this.innerWidth >= 540) {
+    if (this.innerWidth >= 530) {
       device = "desktop";
-    } else if (this.innerWidth <= 540) {
+      console.log("desktop");
+    } else if (this.innerWidth <= 530) {
       device = "mobile";
+      console.log("mobile");
     }
     if (device) {
       heroImage.setAttribute("src", `./images/${device}-image-hero-1.jpg`);

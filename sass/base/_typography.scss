@@ -3,8 +3,9 @@ html {
   font-size: 16px;
 }
 body {
-  position: relative;
-  @include desktop-view {
-    // margin: 0 5%;
+  height: 100%;
+  width: 100%;
+  @include breakpoint(uranus) {
+    font-size: 1.2em;
   }
 }

@@ -1,55 +1,15 @@
 .header {
   width: 100%;
-  height: fit-content;
-  position: relative;
-  overflow-x: hidden;
   display: flex;
-  flex-wrap: wrap;
-  @include tablet-view-large {
-    height: 450px;
-    flex-wrap: nowrap;
+  flex-direction: column;
+  @include breakpoint(jupiter) {
+    height: 534px;
+    flex-direction: row;
   }
   &__heroImage {
-    max-width: 100%;
-    @include tablet-view-large {
-      width: 60%;
+    width: 100%;
+    @include breakpoint(jupiter) {
+      width: 62%;
     }
-  }
-
-  &__article {
-    @extend .article;
-
-    @include tablet-view-large {
-      padding: 90px 5% 5%;
-    }
-    @include tablet-view-large {
-      width: 40%;
-    }
-  }
-
-  &__btn {
-    z-index: 2;
-    right: 0;
-    top: -50px;
-    position: absolute;
-    background-color: var(--black);
-    height: 50px;
-    width: 100px;
-    display: flex;
-  }
-  &__arrowBtn {
-    padding: 15px 20px;
-    cursor: pointer;
-  }
-}
-@keyframes arrowMove {
-  0% {
-    margin-left: 0;
-  }
-  50% {
-    margin-left: 25px;
-  }
-  100% {
-    margin-left: 0;
   }
 }
