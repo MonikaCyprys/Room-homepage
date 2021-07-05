@@ -1,0 +1,10 @@
+.attribution {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8em;
+
+  &__link {
+    color: var(--veryDarkGray);
+    cursor: pointer;
+  }
+}
