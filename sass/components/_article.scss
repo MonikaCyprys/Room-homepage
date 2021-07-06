@@ -57,15 +57,15 @@
     top: -50px;
     position: absolute;
     background-color: var(--black);
-    height: 50px;
-    width: 86px;
+    height: 60px;
+    width: 96px;
     display: flex;
     justify-content: center;
     @include breakpoint(jupiter) {
       top: auto;
       bottom: 0;
       right: auto;
-      left: -86px;
+      left: -96px;
     }
     @include breakpoint(uranus) {
       top: auto;

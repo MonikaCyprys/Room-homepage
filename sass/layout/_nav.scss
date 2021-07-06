@@ -12,12 +12,24 @@
     cursor: pointer;
     position: relative;
     z-index: 3;
+    @include breakpoint(jupiter) {
+      &--desktopNav {
+        display: none;
+      }
+    }
   }
   &__logo {
     position: absolute;
     top: 45px;
     left: 50%;
     transform: translateX(-50%);
+    @include breakpoint(jupiter) {
+      &--desktopNav {
+        position: static;
+        transform: translateX(0);
+        margin: 45px;
+      }
+    }
   }
   &__menu {
     z-index: 2;
@@ -32,7 +44,15 @@
     opacity: 0;
     pointer-events: none;
     transition: all 0.8s ease;
-
+    @include breakpoint(jupiter) {
+      &--desktopNav {
+        opacity: 1;
+        justify-content: unset;
+        background-color: transparent;
+        position: static;
+        width: auto;
+      }
+    }
     &--active {
       opacity: 1;
       pointer-events: all;
@@ -40,10 +60,33 @@
     }
   }
   &__item {
-    margin-right: 25px;
+    margin: 45px 20px;
     font-family: inherit;
     font-weight: 600;
     cursor: pointer;
-    transition: margin-right 0.8s 0.2 ease;
+    transition: all 0.8s 0.2 ease;
+    overflow-x: hidden;
+    font-size: 0.9em;
+
+    @include breakpoint(jupiter) {
+      &--desktopNav {
+        margin-right: 0;
+        color: var(--white);
+        pointer-events: all;
+        margin-right: 23px;
+        &::after {
+          display: block;
+          content: "";
+          width: 50%;
+          background-color: var(--white);
+          height: 1px;
+          transform: translateX(-100%);
+          transition: all 0.3s ease;
+        }
+        &:hover::after {
+          transform: translateX(50%);
+        }
+      }
+    }
   }
 }
