@@ -24,11 +24,19 @@ html {
 body {
   height: 100%;
   width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 @media (min-width: 1200px) {
   body {
     font-size: 1.2em;
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    font-size: 1.4em;
   }
 }
 
@@ -52,7 +60,6 @@ body {
 }
 
 .article {
-  font-size: 1rem;
   max-height: 100%;
   width: 100%;
   position: relative;
@@ -119,6 +126,12 @@ body {
   font-variant: small-caps;
 }
 
+@media (min-width: 1600px) {
+  .article__header--slider {
+    padding: 0;
+  }
+}
+
 .article__text {
   line-height: 1.6;
   font-size: 0.8em;
@@ -129,6 +142,12 @@ body {
 
 .article__text--slider {
   font-size: 0.9em;
+}
+
+@media (min-width: 1600px) {
+  .article__text--slider {
+    padding: 5% 0;
+  }
 }
 
 .article__sliderBtn {
@@ -233,6 +252,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 @media (min-width: 930px) {
@@ -252,6 +272,12 @@ body {
 @media (min-width: 930px) {
   .header__heroImage {
     width: 62%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .header__heroImage {
+    width: 140%;
   }
 }
 
@@ -299,6 +325,13 @@ body {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     margin: 45px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .nav__logo {
+    width: 82px;
+    height: 24px;
   }
 }
 

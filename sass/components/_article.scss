@@ -1,5 +1,4 @@
 .article {
-  font-size: 1rem;
   max-height: 100%;
   width: 100%;
   position: relative;
@@ -32,6 +31,7 @@
     font-size: 1.7em;
     padding: 45px 0 0 0;
     line-height: 1.1;
+
     &::first-letter {
       text-transform: capitalize;
     }
@@ -39,6 +39,11 @@
       font-size: 1.2em;
       letter-spacing: 4px;
       font-variant: small-caps;
+    }
+    &--slider {
+      @include breakpoint(neptune) {
+        padding: 0;
+      }
     }
   }
   &__text {
@@ -49,6 +54,9 @@
     padding: 5% 0 10% 0;
     &--slider {
       font-size: 0.9em;
+      @include breakpoint(neptune) {
+        padding: 5% 0;
+      }
     }
   }
   &__sliderBtn {

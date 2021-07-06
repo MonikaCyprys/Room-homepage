@@ -30,6 +30,10 @@
         margin: 45px;
       }
     }
+    @include breakpoint(neptune) {
+      width: 82px;
+      height: 24px;
+    }
   }
   &__menu {
     z-index: 2;

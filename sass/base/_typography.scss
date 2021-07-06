@@ -5,7 +5,13 @@ html {
 body {
   height: 100%;
   width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+
   @include breakpoint(uranus) {
     font-size: 1.2em;
+  }
+  @include breakpoint(neptune) {
+    font-size: 1.4em;
   }
 }
