@@ -9,6 +9,8 @@
   }
   &__heroImage {
     width: 100%;
+    object-fit: cover;
+    
     @include breakpoint(jupiter) {
       width: 62%;
     }

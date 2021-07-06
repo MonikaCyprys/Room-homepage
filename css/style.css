@@ -229,6 +229,8 @@ body {
 
 .about__image {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 800px) {
@@ -267,6 +269,8 @@ body {
 
 .header__heroImage {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 930px) {

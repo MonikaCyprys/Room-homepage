@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   &__image {
     width: 100%;
+    object-fit: cover;
     @include breakpoint(mars) {
       width: 50%;
     }
